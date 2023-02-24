@@ -1,0 +1,34 @@
+man (command) - informacje o danym poleceniu
+who - pokazuje aktywnych użytkowników
+whoami - pokazuje naszą nazwę użytkownika
+ls - pokazuje listę katalogów i plików
+pwd - pokazuje ścieżkę katalogu domowego użytkownika
+ls -l pokazuje listę katalogow i plików i informacje o każdym z plików
+tree - pokazuje katalogi w postaci drzewa
+ls / - pokazuje wszytkie pliki w katalogu głównym
+cd - przechodzenie po katalogach
+mkdir - tworzenie nowego katalogu
+rmdir - usuwanie istniejącego katalogu
+rm - usuwanie pliku
+exit - wyjście 
+
+oznaczenia katalogów:
+bieżący - . 
+nadrzędy - ..
+główny - /
+domowy - ~
+
+jakie elementy oznaczają poniższe symbole:
+-
+d - wypisuje same katalogi bez zawartości
+c - sortuje wg ctime, poczynając od najnowszych plików
+b - cytuje znaki niegraficzne w stulu języja C
+l - użycie długiego formatu wyjściowego
+
+
+
+Zadanie
+mkdir Dane
+cd Dane
+cd ..
+ls /
