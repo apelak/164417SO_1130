@@ -1,0 +1,166 @@
+Zadanie 1
+
+ mkdir Teksty
+ mkdir Programy
+ cd Teksty
+ mkdir Listy
+ mkdir Podania
+ cd ..
+ cd Programy
+ mkdir C
+ mkdir Shell
+ cd Shell
+ mkdir Skrypty
+ cd ..
+ cd ..
+ tree
+.
+├── Dane
+├── Programy
+│   ├── C
+│   └── Shell
+│       └── Skrypty
+├── public_html
+└── Teksty
+    ├── Listy
+    └── Podania
+
+Zadanie 2
+
+cd /home/domena/s164417/Teksty
+nano Zestawienie.txt
+
+164417
+03.03.2023
+11:57
+Pogoda: pochmurno
+cp Zestawienie.txt /home/domena/s164417/Programy/Shell/Skrypty/spis23.txt
+s164417@orfi:~/Programy/Shell/Skrypty$ cat spis23.txt
+164417
+03.03.2023
+11:57
+Pogoda: pochmurno
+
+Zadanie 3
+
+s164417@orfi:~/Teksty$ ln -s Podania /home/domena/s164417/Dane/Odsylacz_Dane
+s164417@orfi:~/Teksty$ cd
+s164417@orfi:~$ cd Dane
+s164417@orfi:~/Dane$ ls
+Odsylacz_Dane
+
+Zadanie 4
+
+s164417@orfi:~/Teksty$ ln -s Podania /home/domena/s164417/Programy/Shell/Skrypty/Skrypty_Odsylacz
+s164417@orfi:~/Teksty$ ls
+Listy  Podania  Zestawienie.txt
+s164417@orfi:~/Teksty$ cd
+s164417@orfi:~$ cd Programy
+s164417@orfi:~/Programy$ cd Shell
+s164417@orfi:~/Programy/Shell$ cd Skrypty
+s164417@orfi:~/Programy/Shell/Skrypty$ ls
+Skrypty_Odsylacz  spis23.txt
+
+Zadanie 5
+
+s164417@orfi:~/Teksty$ ln -s Zestawienie.txt DoZestawienia
+s164417@orfi:~/Teksty$ ls
+DoZestawienia  Listy  Podania  Zestawienie.txt
+s164417@orfi:~/Teksty$ ls -l
+razem 12
+lrwxrwxrwx 1 s164417 domain users   15 03-03 12:28 DoZestawienia -> Zestawienie.txt
+drwxr-xr-x 2 s164417 domain users 4096 03-03 11:45 Listy
+drwxr-xr-x 2 s164417 domain users 4096 03-03 11:45 Podania
+-rw-r--r-- 1 s164417 domain users   42 03-03 11:58 Zestawienie.txt
+
+Zadanie 6
+
+s164417@orfi:~$ rm -R Programy
+s164417@orfi:~$ ls
+Dane  public_html  Teksty
+s164417@orfi:~$ tree
+.
+├── Dane
+│   └── Odsylacz_Dane -> Podania
+├── public_html
+└── Teksty
+    ├── DoZestawienia -> Zestawienie.txt
+    ├── Listy
+    ├── Podania
+    └── Zestawienie.txt
+
+5 directories, 3 files
+s164417@orfi:~$
+
+Zadanie 7
+
+a)
+
+s164417@orfi:~/Teksty$ chmod 700 Listy
+s164417@orfi:~/Teksty$ ls -l
+razem 12
+lrwxrwxrwx 1 s164417 domain users   15 03-03 12:28 DoZestawienia -> Zestawienie.txt
+drwx------ 2 s164417 domain users 4096 03-03 11:45 Listy
+drwxr-xr-x 2 s164417 domain users 4096 03-03 11:45 Podania
+-rw-r--r-- 1 s164417 domain users   42 03-03 11:58 Zestawienie.txt
+
+b)
+
+s164417@orfi:~/Teksty$ ls -l
+razem 12
+lrwxrwxrwx 1 s164417 domain users   15 03-03 12:28 DoZestawienia -> Zestawienie.txt
+drwx------ 2 s164417 domain users 4096 03-03 11:45 Listy
+drwxr-xr-x 2 s164417 domain users 4096 03-03 11:45 Podania
+-rw-r--r-- 1 s164417 domain users   42 03-03 11:58 Zestawienie.txt
+s164417@orfi:~/Teksty$
+
+c)
+
+s164417@orfi:~/Teksty$ chmod 741 Zestawienie.txt
+s164417@orfi:~/Teksty$ ls -l
+razem 12
+lrwxrwxrwx 1 s164417 domain users   15 03-03 12:28 DoZestawienia -> Zestawienie.txt
+drwx------ 2 s164417 domain users 4096 03-03 11:45 Listy
+drwxr-xr-x 2 s164417 domain users 4096 03-03 11:45 Podania
+-rwxr----x 1 s164417 domain users   42 03-03 11:58 Zestawienie.txt
+
+Zadanie 8
+
+r - prawo do odczytu pliku
+w - prawo do nadpisania pliku
+x - prawo do wykonania/uruchomienia pliku
+
+s164417@orfi:~$ ls
+Dane  public_html  Teksty
+s164417@orfi:~$ cd Dane
+s164417@orfi:~/Dane$ nano Zapis.txt
+s164417@orfi:~/Dane$ ls
+Odsylacz_Dane  Zapis.txt
+s164417@orfi:~/Dane$ ls -l
+razem 4
+lrwxrwxrwx 1 s164417 domain users  7 03-03 12:14 Odsylacz_Dane -> Podania
+-rw-r--r-- 1 s164417 domain users 18 03-09 18:48 Zapis.txt
+
+uzytkownik ma prawo do odczytu i zapisu, grupa do odczytu z pliku, pozostali do odczytu z pliku
+
+Zadanie 9
+
+s164417@orfi:~$ ls -l
+razem 12
+drwxr-xr-x 2 s164417 domain users 4096 03-09 18:48 Dane
+drwxr-xr-x 2 s164417 domain users 4096 02-24 11:59 public_html
+drwxr-xr-x 4 s164417 domain users 4096 03-03 12:56 Teksty
+
+Do katalogu Dane użytkownik ma prawo odczytu, tworzenia i usuwania plików oraz wykonania - wejścia do katalogu, grupa i pozostali do odczytu i wykonania.
+
+Zadanie 10
+
+s164417@orfi:~$ umask 0117
+s164417@orfi:~$ mkdir Test
+s164417@orfi:~$ ls -l
+razem 16
+drwxr-xr-x 2 s164417 domain users 4096 03-09 18:48 Dane
+drwxr-xr-x 2 s164417 domain users 4096 02-24 11:59 public_html
+drwxr-xr-x 4 s164417 domain users 4096 03-03 12:56 Teksty
+drw-rw---- 2 s164417 domain users 4096 03-09 19:11 Test
+
