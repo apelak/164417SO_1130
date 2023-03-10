@@ -1,0 +1,108 @@
+Zadanie 1
+
+s164417@orfi:~$ mkdir Notatki
+s164417@orfi:~$ mkdir Przepisy
+s164417@orfi:~$ cd Notatki/
+s164417@orfi:~/Notatki$ nano Zapiski.txt
+s164417@orfi:~/Notatki$ cat Zapiski.txt
+Dzień tygodnia: piątek;
+informacje o katalogu /dev - katalog, w którym umieszczone są pliki odpowiedzialne za urządzenia systemu
+operacyjnego Linux. Dostęp do tego katalogu posiada tylko administrator systemu.
+Osoba ta może montować urządzenia i udostępniać je innym użytkownikom.
+s164417@orfi:~/Notatki$ mkdir Kopie
+s164417@orfi:~/Notatki$ ls
+Kopie  Zapiski.txt
+
+Zadanie 2
+
+s164417@orfi:~$ ln -s ~/Notatki/Zapiski.txt ~/Przepisy/AdZapisek
+s164417@orfi:~$ tree
+.
+├── Dane
+│   ├── Odsylacz_Dane -> Podania
+│   └── Zapis.txt
+├── Notatki
+│   ├── Kopie
+│   └── Zapiski.txt
+├── Przepisy
+│   └── AdZapisek -> /home/domena/s164417/Notatki/Zapiski.txt
+├── public_html
+├── Teksty
+│   ├── DoZestawienia -> Zestawienie.txt
+│   ├── Listy
+│   ├── Podania
+│   ├── Zestawienie.txt
+│   └── Zestawienie.txt.save
+└── Test
+
+9 directories, 7 files
+s164417@orfi:~$
+
+Zadanie 3
+
+s164417@orfi:~$ chmod 744 Notatki
+s164417@orfi:~$ cd Notatki/
+s164417@orfi:~/Notatki$ chmod 764 Zapiski.txt
+s164417@orfi:~/Notatki$ ls -l
+razem 8
+drwxr-xr-x 2 s164417 domain users 4096 03-10 11:52 Kopie
+-rwxrw-r-- 1 s164417 domain users  294 03-10 11:52 Zapiski.txt
+s164417@orfi:~/Notatki$ cd
+s164417@orfi:~$ ls -l
+razem 24
+drwxr-xr-x 2 s164417 domain users 4096 03-09 19:15 Dane
+drwxr--r-- 3 s164417 domain users 4096 03-10 12:03 Notatki
+drwxr-xr-x 2 s164417 domain users 4096 03-10 12:11 Przepisy
+drwxr-xr-x 2 s164417 domain users 4096 02-24 11:59 public_html
+drwxr-xr-x 4 s164417 domain users 4096 03-03 12:56 Teksty
+drw-rw---- 2 s164417 domain users 4096 03-09 19:11 Test
+
+Zadanie 4
+
+s164417@orfi:~$ umask 0027
+
+Zadanie 5
+
+s164417@orfi:~$ nano Dane.txt
+s164417@orfi:~$ cat Dane.txt
+test test test
+s164417@orfi:~$ mkdir Proba1
+s164417@orfi:~$ ls -l
+razem 32
+drwxr-xr-x 2 s164417 domain users 4096 03-09 19:15 Dane
+-rw-r----- 1 s164417 domain users   15 03-10 12:15 Dane.txt
+drwxr--r-- 3 s164417 domain users 4096 03-10 12:03 Notatki
+drwxr-x--- 2 s164417 domain users 4096 03-10 12:16 Proba1
+drwxr-xr-x 2 s164417 domain users 4096 03-10 12:11 Przepisy
+drwxr-xr-x 2 s164417 domain users 4096 02-24 11:59 public_html
+drwxr-xr-x 4 s164417 domain users 4096 03-03 12:56 Teksty
+drw-rw---- 2 s164417 domain users 4096 03-09 19:11 Test
+s164417@orfi:~$ umask
+0027
+
+Zadanie 6
+
+s164417@orfi:~/Notatki$ ls -i
+12845238 Kopie  12845241 Zapiski.txt
+s164417@orfi:~/Notatki$
+
+Zadanie 7
+
+Najpierw musi wyszukać katalog Dane, sprawdzić informacje o nim,
+sprawdzić prawa dostępu , potem w katalogu Dane wyszukac plik dane1, odczytać informacje o nim, sprawdzić prawa dostępu, jeśli na to pozwalają
+to otworzyć plik w odpowiednim trybie - do odczytu, odczytac potrzebne dane i zamknac plik 
+
+
+Zadania z dysku:
+Zadanie 1
+
+s164417@orfi:~$ ls
+a.out  Dane  dane.txt  Dane.txt  Notatki  plik_lseek.c  Proba1  Przepisy  public_html  Teksty  Test
+s164417@orfi:~$ cat dane.txt
+A oto o kocie Ali.
+I o innych kotach.
+
+
+Zadanie 2
+
+
