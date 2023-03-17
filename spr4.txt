@@ -1,0 +1,272 @@
+Zadanie 1
+a
+
+s164417@orfi:~$ cat>dane22.txt
+Pogoda: cieplo, slonecznie
+^Z
+[4]+  Zatrzymano              cat > dane22.txt
+s164417@orfi:~$ cat dane22.txt
+Pogoda: cieplo, slonecznie
+s164417@orfi:~$ ls -l >> dane22.txt
+s164417@orfi:~$ cat dane22.txt
+Pogoda: cieplo, slonecznie
+razem 12
+-rw-r--r-- 1 s164417 domain users   27 03-17 11:47 dane22.txt
+drwxr-x--- 2 s164417 domain users 4096 03-10 12:16 Proba1
+drwxr-xr-x 2 s164417 domain users 4096 02-24 11:59 public_html
+
+s164417@orfi:~$ pwd >> dane22.txt
+s164417@orfi:~$ cat dane22.txt
+Pogoda: cieplo, slonecznie
+razem 12
+-rw-r--r-- 1 s164417 domain users   27 03-17 11:47 dane22.txt
+drwxr-x--- 2 s164417 domain users 4096 03-10 12:16 Proba1
+drwxr-xr-x 2 s164417 domain users 4096 02-24 11:59 public_html
+/home/domena/s164417
+
+b
+
+s164417@orfi:~$ tree > drzewo.txt
+s164417@orfi:~$ cat drzewo.txt
+.
+├── dane22.txt
+├── drzewo.txt
+├── Proba1
+└── public_html
+
+s164417@orfi:~$ cat dane22.txt drzewo.txt>wynik.txt
+s164417@orfi:~$ cat wynik.txt
+Pogoda: cieplo, slonecznie
+razem 12
+-rw-r--r-- 1 s164417 domain users   27 03-17 11:47 dane22.txt
+drwxr-x--- 2 s164417 domain users 4096 03-10 12:16 Proba1
+drwxr-xr-x 2 s164417 domain users 4096 02-24 11:59 public_html
+/home/domena/s164417
+.
+├── dane22.txt
+├── drzewo.txt
+├── Proba1
+└── public_html
+
+2 directories, 2 files
+
+c
+
+s164417@orfi:~$ cat dane22.txt >> zsumowanepliki.txt | cat drzewo.txt >>zsumowanepliki.txt |cat wynik.txt >> zsumowanepliki.txt
+s164417@orfi:~$ cat zsumowanepliki.txt
+.
+├── dane22.txt
+├── drzewo.txt
+├── Proba1
+└── public_html
+
+2 directories, 2 files
+Pogoda: cieplo, slonecznie
+razem 20
+-rw-r--r-- 1 s164417 domain users   27 03-17 12:08 dane22.txt
+drwxr-x--- 2 s164417 domain users 4096 03-10 12:16 Proba1
+drwxr-xr-x 2 s164417 domain users 4096 02-24 11:59 public_html
+Pogoda: cieplo, slonecznie
+razem 12
+-rw-r--r-- 1 s164417 domain users   27 03-17 11:47 dane22.txt
+drwxr-x--- 2 s164417 domain users 4096 03-10 12:16 Proba1
+drwxr-xr-x 2 s164417 domain users 4096 02-24 11:59 public_html
+/home/domena/s164417
+.
+├── dane22.txt
+├── drzewo.txt
+├── Proba1
+└── public_html
+
+2 directories, 2 files
+
+d
+
+s164417@orfi:/$ who | wc
+     20     100    1092
+
+e
+
+s164417@orfi:~$ ls -l | wc
+      7      56     385
+
+2
+
+a
+
+s164417@orfi:~$ find -maxdepth 1 -empty
+./Proba1
+./public_html
+
+b
+
+
+s164417@orfi:/$ cd /dev
+s164417@orfi:/dev$ find -type c | wc
+./fb0
+./dri/card0
+./rfkill
+./snd/seq
+./snd/timer
+./vhost-vsock
+./vhost-net
+./uhid
+./vhci
+./vfio/vfio
+./mapper/control
+./uinput
+./ppp
+./net/tun
+./loop-control
+./nvram
+./btrfs-control
+./cuse
+./vcsa6
+./vcsu6
+./vcs6
+./vcsa5
+./vcsu5
+./vcs5
+./vcsa4
+./vcsu4
+./vcs4
+./vcsa3
+./vcsu3
+./vcs3
+./vcsa2
+./vcsu2
+./vcs2
+./fuse
+./autofs
+./hidraw0
+./bus/usb/001/002
+./bus/usb/001/001
+./pts/3
+./pts/2
+./pts/25
+./pts/22
+./pts/23
+./pts/24
+./pts/21
+./pts/20
+./pts/19
+./pts/16
+./pts/13
+./pts/11
+./pts/8
+./pts/7
+./pts/6
+./pts/5
+./pts/10
+./pts/12
+./pts/1
+./pts/0
+./pts/ptmx
+./cpu_dma_latency
+./rtc0
+./psaux
+./input/event5
+./input/event4
+./input/event3
+./input/event2
+./input/event1
+./input/event0
+./input/mouse2
+./input/mouse1
+./input/mouse0
+./input/mice
+./hpet
+./ttyS3
+./ttyS2
+./ttyS1
+./ttyS0
+./ptmx
+./snapshot
+./tty63
+./tty62
+./tty61
+./tty60
+./tty59
+./tty58
+./tty57
+./tty56
+./tty55
+./tty54
+./tty53
+./tty52
+./tty51
+./tty50
+./tty49
+./tty48
+./tty47
+./tty46
+./tty45
+./tty44
+./tty43
+./tty42
+./tty41
+./tty40
+./tty39
+./tty38
+./tty37
+./tty36
+./tty35
+./tty34
+./tty33
+./tty32
+./tty31
+./tty30
+./tty29
+./tty28
+./tty27
+./tty26
+./tty25
+./tty24
+./tty23
+./tty22
+./tty21
+./tty20
+./tty19
+./tty18
+./tty17
+./tty16
+./tty15
+./tty14
+./tty13
+./tty12
+./tty11
+./tty10
+./tty9
+./tty8
+./tty7
+./tty6
+./tty5
+./tty4
+./tty3
+./tty2
+./tty1
+./vcsa1
+./vcsu1
+./vcs1
+./vcsa
+./vcsu
+./vcs
+./tty0
+./console
+./tty
+./kmsg
+./urandom
+./random
+./full
+./zero
+./port
+./null
+./mem
+./vga_arbiter
+160     160    1422
+
+
+c
+
+s164417@orfi:/$ find -type d -perm -u=rx | wc
+22746   22789  804892
