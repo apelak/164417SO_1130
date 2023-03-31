@@ -1,0 +1,42 @@
+Zadanie 1
+s164417@orfi:~$ a=10
+s164417@orfi:~$ b=5
+s164417@orfi:~$ if [ $a -eq $b ]
+> then echo liczby sa rowne
+> elif [ $a -lt $b ]
+> then echo liczba a jest mniejsza
+> else echo liczba b jest mniejsza
+> fi
+liczba b jest mniejsza
+
+Zadanie 2
+
+s164417@orfi:~$ if [ -e ~/dane.txt ]; then echo taki plik istnieje; else echo taki plik nie istnieje; fi             
+taki plik nie istnieje
+
+Zadanie 3
+
+s164417@orfi:~$ a="xyz"
+s164417@orfi:~$ echo $a
+xyz
+s164417@orfi:~$ if [ -n $a ]
+> then echo zawiera lancuch niezerowy
+> else echo nie zawiera lancucha niezerowego
+> fi
+zawiera lancuch niezerowy
+
+Zadanie 4
+
+s164417@orfi:~$ home=/home/domena/s164417
+s164417@orfi:~$ if [ $(pwd) != $home ] ; then echo katalog nie jest domowy; else echo katalog jest domowy; fi
+katalog jest domowy
+s164417@orfi:~$ cd ..
+s164417@orfi:/home/domena$ if [ $(pwd) != $home ] ; then echo katalog nie jest domowy; else echo katalog jest domowy; fi
+katalog nie jest domowy
+
+
+
+
+
+
+
